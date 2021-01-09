@@ -14,13 +14,13 @@ def checkPass():
         play_apps()
 
     else:
-        label = Label(main, text=f"the password is wrong !")
+        label = Label(main, text="the password is wrong !")
         label.pack()
 
 
 pass_label = Label(main, text="enter the password to open the program ", fg="red")
-password_box = Entry(main, width=20, borderwidth=5)
-submit_button = Button(main, text="confirm", command=checkPass, bg="black", fg="red")
+password_box = Entry(main, width=20, borderwidth=5, show="*")
+submit_button = Button(main, text="confirm", command=checkPass, bg="black", fg="red", cursor="dot")
 
 pass_label.pack()
 password_box.pack()
@@ -28,7 +28,9 @@ submit_button.pack()
 
 
 def play_apps():
+
     main.geometry("900x700")
+
     for widget in main.winfo_children():
         widget.destroy()
 
@@ -62,7 +64,7 @@ def play_apps():
         for app in apps:
             os.startfile(app)
 
-    frame = Frame(body, bg="black")
+    frame = Frame(body, bg="black", borderwidth=10)
 
     frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
 
