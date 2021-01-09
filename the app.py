@@ -14,7 +14,7 @@ def checkPass():
         play_apps()
 
     else:
-        label = Label(main, text=f"the password is wrong bitch !")
+        label = Label(main, text=f"the password is wrong !")
         label.pack()
 
 
@@ -50,7 +50,7 @@ def play_apps():
         for widget in frame.winfo_children():
             widget.destroy()
 
-        fileName = filedialog.askopenfilename(initialdir="D:", title="select the fucken file",
+        fileName = filedialog.askopenfilename(initialdir="D:", title="select the file",
                                               filetypes=(("all files", "*.*"), ("exe", "*.exe")))
         apps.append(fileName)
         print(fileName)
