@@ -32,7 +32,7 @@ def play_apps():
     for widget in main.winfo_children():
         widget.destroy()
 
-    body = Canvas(main, height=700, width=700, bg='lightblue')
+    body = Canvas(main, height=700, width=900, bg='lightblue')
     body.pack()
     main.title("GUI first app")
     apps = []  # empty list
@@ -63,10 +63,8 @@ def play_apps():
             os.startfile(app)
 
     frame = Frame(body, bg="lightgreen")
-    # frame_button = Frame(main, bg="green", width=700)
 
     frame.place(relwidth=0.8, relheight=0.8, relx=0.1, rely=0.1)
-    # frame_button.place(relwidth=0.8, relheight=0.8, rely=1.0, relx=0.1)
 
     openFile = Button(main, text="open file", padx=10, pady=5, fg="white", bg="black", command=addFiles)
     runApps = Button(main, text="run the apps", padx=10, pady=7, fg="white", bg="black", command=runFiles)
